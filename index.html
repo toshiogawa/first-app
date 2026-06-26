@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>おるつ | 自己紹介</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --card: #22263a;
+      --accent: #7c6af7;
+      --accent2: #5ee7d0;
+      --text: #e8eaf6;
+      --muted: #8a8fad;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Header ── */
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #1a1d27 0%, #12101e 100%);
+      padding: 64px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,106,247,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .avatar {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 32px rgba(124,106,247,.5);
+    }
+    header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: .04em; }
+    header p.subtitle {
+      margin-top: 8px;
+      color: var(--accent2);
+      font-size: 1rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    /* ── Main ── */
+    main {
+      width: 100%;
+      max-width: 800px;
+      padding: 48px 24px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* ── Section ── */
+    section h2 {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    section h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--accent), transparent);
+    }
+
+    /* ── About card ── */
+    .about-card {
+      background: var(--card);
+      border: 1px solid rgba(124,106,247,.2);
+      border-radius: 16px;
+      padding: 28px 32px;
+      line-height: 1.9;
+      color: var(--muted);
+      font-size: .97rem;
+    }
+    .about-card span { color: var(--text); font-weight: 600; }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .skill-card {
+      background: var(--card);
+      border: 1px solid rgba(94,231,208,.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .skill-icon {
+      font-size: 1.8rem;
+      width: 44px; height: 44px;
+      background: var(--surface);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .skill-card h3 { font-size: .95rem; font-weight: 600; }
+    .skill-card p  { font-size: .8rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── Hobbies ── */
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .hobby-card {
+      background: var(--card);
+      border: 1px solid rgba(124,106,247,.15);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .hobby-card .icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .hobby-card h3 { font-size: .95rem; font-weight: 600; }
+    .hobby-card p { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── Footer ── */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: .8rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="avatar">🧑‍💻</div>
+    <h1>おるつ</h1>
+    <p class="subtitle">会社員 &nbsp;·&nbsp; アナリスト</p>
+  </header>
+
+  <main>
+
+    <!-- About -->
+    <section>
+      <h2>About</h2>
+      <div class="about-card">
+        はじめまして、<span>おるつ</span>です。<br>
+        現在は会社員として<span>解析業務</span>に携わっています。
+        データを読み解くことを仕事にしながら、
+        プログラミングやギターを楽しむ日々を過ごしています。<br>
+        技術と音楽、両方への好奇心が自分の原動力です。
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <div>
+            <h3>データ解析</h3>
+            <p>統計処理・可視化</p>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <div>
+            <h3>プログラミング</h3>
+            <p>趣味から業務まで</p>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🔍</div>
+          <div>
+            <h3>ロジカル思考</h3>
+            <p>課題の構造化・分析</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section>
+      <h2>Hobbies</h2>
+      <div class="hobbies-grid">
+        <div class="hobby-card">
+          <div class="icon">🎸</div>
+          <h3>ギター</h3>
+          <p>弾き語り・アレンジが好き</p>
+        </div>
+        <div class="hobby-card">
+          <div class="icon">⌨️</div>
+          <h3>プログラミング</h3>
+          <p>気になるものを作る</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2026 おるつ</footer>
+
+</body>
+</html>
